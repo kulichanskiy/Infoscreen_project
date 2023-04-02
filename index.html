@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Infoscreen</title>
+   </head>
+   <body>
+      <div class="main-panel">
+         <div class="infoscreen-panel-background">
+            <div class="next-stop-container">
+               <p class="next-stop-text-ua">Наступна зупика:</p>
+               <p class="next-stop-text-en"><i>Next stop</i></p>
+               <div class="next-station-container">
+                  <p id="next-station-ua" class="next-station-ua">Дніпроспецсталь</p>
+               </div>
+
+               <hr class="next-stop-text-hr" />
+            </div>
+         </div>
+         <div class="news-panel">
+            <img src="img/arrives_soon.jpg" alt="Arrives soon" width="1280" height="853" />
+            >
+         </div>
+      </div>
+      <footer>
+         <div class="route-destination-container">
+            <img src="img/routeDefault.png" alt="route logo" class="route-logo" />
+            <p class="destination-text">Destionation</p>
+            <div class="current_date_time_block">
+               <p class="current-date-text" id="current_date_id"></p>
+               <img
+                  class="current-time-text"
+                  src="img/icon-time.png"
+                  alt="icon-time"
+                  width="80"
+                  height="80"
+               />
+               <p class="current-time-text" id="current_time_id"></p>
+            </div>
+            <script src="scripts/modules/currentTime.js"></script>
+         </div>
+      </footer>
+      <script src="scripts/app.js"></script>
+   </body>
+</html>

@@ -1,0 +1,142 @@
+@font-face {
+   font-family: "montserrat-bold";
+   src: url("fonts/Montserrat-Bold.ttf") format("truetype");
+   font-style: normal;
+   font-weight: normal;
+}
+@font-face {
+   font-family: "montserrat-semibold";
+   src: url("fonts/Montserrat-SemiBold.ttf") format("truetype");
+   font-style: normal;
+   font-weight: normal;
+}
+@font-face {
+   font-family: "montserrat-medium";
+   src: url("fonts/Montserrat-Medium.ttf") format("truetype");
+   font-style: normal;
+   font-weight: normal;
+}
+@font-face {
+   font-family: "montserrat-thin";
+   src: url("fonts/Montserrat-Thin.ttf") format("truetype");
+   font-style: normal;
+   font-weight: normal;
+}
+@font-face {
+   font-family: "monserrat-light";
+   src: url("fonts/Montserrat-Light.ttf") format("truetype");
+   font-style: normal;
+   font-weight: normal;
+}
+
+html {
+   width: 3150px;
+   height: 1050px;
+}
+
+.infoscreen-panel-background {
+   width: 1871px;
+   height: 850px;
+}
+
+.news-panel {
+   width: 1280px;
+   height: 853px;
+   float: right;
+   margin-top: -861px;
+   border-left: 6px solid rgb(74, 74, 74);
+}
+
+.route-logo {
+   width: 340px;
+   height: 190px;
+   margin-right: 20px;
+}
+
+.route-destination-container {
+   justify-content: left;
+   margin-left: 50px;
+   align-items: center;
+   display: flex;
+}
+
+.next-stop-container {
+   width: 1871px;
+   font-size: 90px;
+   margin-left: 20px;
+   position: relative;
+}
+
+.next-stop-text-ua {
+   font-size: 60px;
+   margin-bottom: -50px;
+   margin-top: 5px;
+   font-family: "montserrat-semibold";
+}
+
+.next-station-container {
+   position: absolute;
+   right: 0;
+}
+
+.next-station-ua {
+   font-size: 80px;
+   font-family: "montserrat-bold";
+}
+
+.next-stop-text-hr {
+   height: 4px;
+   background-color: rgb(74, 74, 74);
+   margin-top: -15px;
+   margin-left: -30px;
+   margin-right: 42px;
+}
+
+.next-stop-text-en {
+   font-size: 40px;
+   color: rgb(98, 98, 98);
+   font-family: "montserrat-medium";
+}
+
+footer {
+   background-image: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 52%,
+      rgba(0, 28, 255, 1) 100%
+   );
+   align-items: center;
+   margin-top: -8px;
+   margin-left: -10px;
+   height: 197px;
+}
+
+.destination-text {
+   font-size: 102px;
+   white-space: nowrap;
+   margin: 0;
+   margin-left: 20px;
+   text-align: center;
+   font-family: "montserrat-bold";
+   color: whitesmoke;
+}
+
+.current_date_time_block {
+   font-size: 80px;
+   color: whitesmoke;
+   font-family: "montserrat-semibold";
+   width: 1280;
+   height: 197px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 1530px;
+}
+
+.current-date-text {
+   margin-left: -140px;
+}
+
+.current-time-text {
+   margin-left: 40px;
+}
