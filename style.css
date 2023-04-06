@@ -32,19 +32,31 @@
 html {
    width: 3150px;
    height: 1050px;
+   margin: 0;
+   padding: 0;
+}
+body {
+   background-color: gray;
+}
+
+.main-panel {
+   width: 3150px;
+   height: 853px;
+   background-color: white;
 }
 
 .infoscreen-panel-background {
-   width: 1871px;
-   height: 850px;
+   width: 1870px;
+   height: 430px;
+}
+.station-list-container {
+   height: 423px;
 }
 
 .news-panel {
    width: 1280px;
    height: 853px;
    float: right;
-   margin-top: -861px;
-   border-left: 6px solid rgb(74, 74, 74);
 }
 
 .route-logo {
@@ -61,10 +73,42 @@ html {
 }
 
 .next-stop-container {
-   width: 1871px;
-   font-size: 90px;
-   margin-left: 20px;
    position: relative;
+   width: 1871px;
+   height: 430px;
+}
+
+.next-stop-text-container {
+   position: absolute;
+   top: 0;
+   left: 15px;
+   width: 70%;
+   height: 40%;
+}
+
+.connection-container {
+   position: absolute;
+   top: 45%;
+   transform: translateY(-50%);
+   left: 46%;
+   width: calc(30% - 20px); /* учитываем отступ между .connection-container и .exit-container */
+}
+
+.next-station-container {
+   position: absolute;
+   top: 43%;
+   left: 17%;
+   transform: translate(-50%, -50%);
+   height: 60%;
+   width: calc(30% - 20px); /* учитываем отступ между .connection-container и .exit-container */
+}
+
+.exit-container {
+   position: absolute;
+   top: 0;
+   width: 100%;
+   margin-left: 1650px;
+   height: 40%;
 }
 
 .next-stop-text-ua {
@@ -74,28 +118,26 @@ html {
    font-family: "montserrat-semibold";
 }
 
-.next-station-container {
-   position: absolute;
-   right: 0;
+.next-stop-text-en {
+   font-size: 40px;
+   color: rgb(98, 98, 98);
+   font-family: "montserrat-medium";
 }
 
 .next-station-ua {
    font-size: 80px;
    font-family: "montserrat-bold";
 }
-
-.next-stop-text-hr {
-   height: 4px;
-   background-color: rgb(74, 74, 74);
-   margin-top: -15px;
-   margin-left: -30px;
-   margin-right: 42px;
-}
-
-.next-stop-text-en {
-   font-size: 40px;
+.next-station-en {
+   font-size: 50px;
+   margin-top: -90px;
    color: rgb(98, 98, 98);
    font-family: "montserrat-medium";
+}
+
+.connection-img {
+   width: 90px;
+   height: 90px;
 }
 
 footer {
@@ -106,31 +148,46 @@ footer {
       rgba(0, 28, 255, 1) 100%
    );
    align-items: center;
+   justify-content: center;
    margin-top: -8px;
    margin-left: -10px;
    height: 197px;
+   width: 3150px;
 }
 
-.destination-text {
-   font-size: 102px;
+.destination-text-container {
+   justify-content: center;
+   align-items: left;
+   height: 197px;
+}
+
+.destination-text-ua {
+   font-size: 100px;
    white-space: nowrap;
    margin: 0;
-   margin-left: 20px;
-   text-align: center;
    font-family: "montserrat-bold";
    color: whitesmoke;
 }
 
+.destination-text-en {
+   margin-top: -60px;
+   font-size: 42px;
+   margin: 0;
+   font-family: "montserrat-bold";
+   color: rgb(198, 198, 198);
+}
+
 .current_date_time_block {
+   position: absolute;
    font-size: 80px;
    color: whitesmoke;
    font-family: "montserrat-semibold";
-   width: 1280;
+   width: 2450px;
    height: 197px;
    display: flex;
-   justify-content: center;
+   justify-content: right;
    align-items: center;
-   margin-left: 1530px;
+   margin-left: 570px;
 }
 
 .current-date-text {

@@ -9,26 +9,37 @@
    </head>
    <body>
       <div class="main-panel">
-         <div class="infoscreen-panel-background">
-            <div class="next-stop-container">
-               <p class="next-stop-text-ua">Наступна зупика:</p>
-               <p class="next-stop-text-en"><i>Next stop</i></p>
-               <div class="next-station-container">
-                  <p id="next-station-ua" class="next-station-ua">Дніпроспецсталь</p>
-               </div>
-
-               <hr class="next-stop-text-hr" />
-            </div>
-         </div>
          <div class="news-panel">
             <img src="img/arrives_soon.jpg" alt="Arrives soon" width="1280" height="853" />
             >
+         </div>
+         <div class="infoscreen-panel-background">
+            <div class="next-stop-container">
+               <div class="next-stop-text-container">
+                  <p class="next-stop-text-ua">Наступна зупика:</p>
+                  <p class="next-stop-text-en"><i>Next stop</i></p>
+               </div>
+               <div id="exit-img" class="exit-container">
+                  <img src="img/exitLeft.png" width="180" height="180" />
+               </div>
+               <div class="next-station-container">
+                  <p id="next-station-ua" class="next-station-ua">Дніпроспецсталь</p>
+                  <p id="next-station-ua" class="next-station-en"><i>Dniprospeczstal`</i></p>
+               </div>
+               <div class="connection-container">
+                  <img src="img/connectionBus.png" class="connection-img" />
+               </div>
+            </div>
+            <div class="stations-list-container"></div>
          </div>
       </div>
       <footer>
          <div class="route-destination-container">
             <img src="img/routeDefault.png" alt="route logo" class="route-logo" />
-            <p class="destination-text">Destionation</p>
+            <div class="destination-text-container">
+               <p class="destination-text-ua">Південна</p>
+               <p class="destination-text-en"><i>Pivdenna(South City)</i></p>
+            </div>
             <div class="current_date_time_block">
                <p class="current-date-text" id="current_date_id"></p>
                <img
