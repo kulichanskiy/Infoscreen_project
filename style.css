@@ -47,9 +47,10 @@ body {
 
 .infoscreen-panel-background {
    width: 1870px;
-   height: 430px;
+   height: 853px;
 }
 .station-list-container {
+   width: 1870px;
    height: 423px;
 }
 
