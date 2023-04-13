@@ -1,3 +1,7 @@
-import mysql2Connect from "./modules/mysqlconnect.js";
+const dotContainers = document.querySelectorAll(".route-line-dots-container > div");
 
-mysql2Connect();
+// function moveRouteLine() {
+//    dotContainers.forEach((contaier) => {
+//       dotContainers.classList.toggle("dot-moving");
+//    });
+// }

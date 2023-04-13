@@ -1,5 +1,4 @@
 let timeZone = "Europe/Kyiv";
-
 let now = new Date();
 let month = now.getMonth() + 1;
 let day = now.getDate();

@@ -1,12 +1,11 @@
-const apiKey = "YOUR_API_KEY";
-const city = "YOUR_CITY_NAME";
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+const apiKey = "034c24a116f54d54c14adbbfd3a8dac6";
+const city = "ZAPORIZHZHIA";
+const url = `https://api.openweathermap.org/data/2.5/weather?q=ZAPORIZHZHIA&appid=034c24a116f54d54c14adbbfd3a8dac6&units=metric`;
 
 fetch(url)
    .then((response) => response.json())
    .then((data) => {
       const temp = data.main.temp;
       const weather = data.weather[0].description;
-      const weatherDiv = document.getElementById("weather");
-      weatherDiv.innerHTML = `${temp}°C<br>Погода: ${weather}`;
+      console.log(`${temp}°C<br>Погода: ${weather}`);
    });

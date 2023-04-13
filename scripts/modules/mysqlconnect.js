@@ -11,10 +11,31 @@ connection.connect((err) => {
       console.log(err);
       return err;
    } else {
-      console.log("Database OK");
+      // console.log("Database OK");
    }
 });
-connection.query("SELECT name_ua FROM station", function (err, results, fields) {
-   if (err) throw err;
-   console.log(results);
-});
+
+const query = {
+   allStation: "SELECT * FROM `station`",
+   stationID: "SELECT id FROM `station`",
+   stationNameUA: function (x) {
+      // Where x is ID
+      let name_ua = "SELECT name_ua FROM `station` WHERE id=" + x + "'";
+      return name_ua;
+   },
+   stationNameEN: function (x) {
+      // Where x is ID
+      let name_en = "SELECT name_en FROM `station` WHERE id=" + x + "'";
+      return name_en;
+   },
+   stationConnMetro: function (x) {
+      // Where x is ID
+      let connMetro = "SELECT metro FROM `station` WHERE id=" + x + "'";
+      return connMetro;
+   },
+};
+
+module.exports = {
+   conn: connection,
+   query: query,
+};

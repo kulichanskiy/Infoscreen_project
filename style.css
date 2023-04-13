@@ -3,6 +3,11 @@
    --default-route-color: gray;
 }
 
+* {
+   margin: 0;
+   padding: 0;
+}
+
 @font-face {
    font-family: "montserrat-bold";
    src: url("fonts/Montserrat-Bold.ttf") format("truetype");
@@ -59,18 +64,6 @@ body {
    height: 423px;
 }
 
-.news-panel {
-   width: 1280px;
-   height: 853px;
-   float: right;
-}
-
-.route-logo {
-   width: 340px;
-   height: 190px;
-   margin-right: 20px;
-}
-
 .route-destination-container {
    justify-content: left;
    margin-left: 50px;
@@ -94,7 +87,7 @@ body {
 
 .connection-container {
    position: absolute;
-   top: 45%;
+   top: 52.5%;
    transform: translateY(-50%);
    left: 46%;
    width: calc(30% - 20px);
@@ -102,7 +95,7 @@ body {
 
 .next-station-container {
    position: absolute;
-   top: 43%;
+   top: 65%;
    left: 17%;
    transform: translate(-50%, -50%);
    height: 60%;
@@ -120,8 +113,9 @@ body {
 .next-stop-text-ua {
    font-size: 60px;
    margin-bottom: -50px;
-   margin-top: 5px;
    font-family: "montserrat-semibold";
+   margin: 0;
+   padding: 0;
 }
 
 .next-stop-text-en {
@@ -131,12 +125,14 @@ body {
 }
 
 .next-station-ua {
+   padding: auto;
+   margin: auto;
    font-size: 80px;
    font-family: "montserrat-bold";
 }
 .next-station-en {
+   position: absolute;
    font-size: 50px;
-   margin-top: -90px;
    color: rgb(98, 98, 98);
    font-family: "montserrat-medium";
 }
@@ -224,18 +220,100 @@ body {
 .dot-container-2,
 .dot-container-3 {
    display: inline-block;
+   position: relative;
    min-width: 600px;
    margin-left: 15px;
    margin-top: -35px;
 }
 
 .route-line-dot {
-   background-color: white;
+   background-color: var(--route-color);
    margin: auto;
    height: 40px;
    width: 40px;
    border-radius: 50%;
-   border: 10px solid black;
+   border: 10px solid white;
+   overflow: hidden;
+}
+
+.route-line-dot-moving {
+   animation: move 3s linear 1;
+}
+
+.route-line-dashed {
+   animation: dash 2s forwards;
+}
+
+.route-line-default-color {
+   animation: default-color-transition 0.5s forwards;
+}
+
+.route-line-display-none {
+   animation: line-display-none 1s forwards;
+}
+
+@keyframes move {
+   0% {
+      transform: translateX(0%);
+      opacity: 1;
+   }
+   20% {
+      opacity: 0;
+   }
+   39.9999% {
+      transform: translateX(-500%);
+   }
+   40% {
+      transform: translateX(300%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0%);
+      opacity: 1;
+   }
+}
+
+@keyframes dash {
+   10% {
+      opacity: 0;
+   }
+   30% {
+      opacity: 0;
+      border-bottom: 17px dashed var(--route-color);
+   }
+   50% {
+      opacity: 0;
+      border-bottom: 17px dashed var(--route-color);
+   }
+   100% {
+      opacity: 1;
+      border-bottom: 17px dashed var(--route-color);
+   }
+}
+
+@keyframes default-color-transition {
+   0% {
+      border-bottom: 17px solid var(--route-color);
+   }
+   100% {
+      border-bottom: 17px solid var(--default-route-color);
+   }
+}
+
+@keyframes line-display-none {
+   0% {
+      opacity: 1;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+
+.news-panel {
+   width: 1280px;
+   height: 853px;
+   float: right;
+   overflow: hidden;
 }
 
 footer {
@@ -251,6 +329,21 @@ footer {
    margin-left: -10px;
    height: 197px;
    width: 3150px;
+   overflow: hidden;
+}
+
+.route-logo {
+   display: flex;
+   width: 330px;
+   height: 160px;
+   justify-content: center;
+   align-items: center;
+   margin-right: 35px;
+   border-radius: 30px;
+   font-size: 150px;
+   font-family: "montserrat-bold";
+   color: whitesmoke;
+   background-color: var(--route-color);
 }
 
 .destination-text-container {
