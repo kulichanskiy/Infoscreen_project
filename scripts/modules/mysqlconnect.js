@@ -6,36 +6,16 @@ const connection = mysql.createConnection({
    database: "stationlist",
    password: "mysql",
 });
-connection.connect((err) => {
-   if (err) {
-      console.log(err);
-      return err;
-   } else {
-      // console.log("Database OK");
-   }
-});
+// connection.connect((err) => {
+//    if (err) throw err;
+//    console.log("\nDatabase --- OK \n");
+// });
 
-const query = {
-   allStation: "SELECT * FROM `station`",
-   stationID: "SELECT id FROM `station`",
-   stationNameUA: function (x) {
-      // Where x is ID
-      let name_ua = "SELECT name_ua FROM `station` WHERE id=" + x + "'";
-      return name_ua;
-   },
-   stationNameEN: function (x) {
-      // Where x is ID
-      let name_en = "SELECT name_en FROM `station` WHERE id=" + x + "'";
-      return name_en;
-   },
-   stationConnMetro: function (x) {
-      // Where x is ID
-      let connMetro = "SELECT metro FROM `station` WHERE id=" + x + "'";
-      return connMetro;
-   },
-};
+let queryStationlist = "SELECT * FROM `station`";
+let queryRoutelist = "SELECT * FROM `routes`";
 
 module.exports = {
    conn: connection,
-   query: query,
+   queryStationlist: queryStationlist,
+   queryRoutelist: queryRoutelist,
 };
