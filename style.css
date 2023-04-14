@@ -334,13 +334,15 @@ footer {
 
 .route-logo {
    display: flex;
-   width: 330px;
-   height: 160px;
    justify-content: center;
+   max-width: 330px;
+   max-height: 160px;
+   padding-inline: 30px;
+   padding-block: 0;
    align-items: center;
    margin-right: 35px;
    border-radius: 30px;
-   font-size: 150px;
+   font-size: 130px;
    font-family: "montserrat-bold";
    color: whitesmoke;
    background-color: var(--route-color);
